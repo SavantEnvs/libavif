@@ -1,0 +1,9 @@
+project: savantenvs/libavif
+target: avif_fuzztest_read_image
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/avif_fuzztest_read_image/testsuite
+cmds:
+  - cmd: /mayhem/avif_fuzztest_read_image
+    libfuzzer: true
+    timeout: 20
